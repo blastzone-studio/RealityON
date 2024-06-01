@@ -1,0 +1,70 @@
+{
+  "__guid": "9f832399-4887-46b0-8f21-2ee284f538e2",
+  "GameObjects": [
+    {
+      "__guid": "89da5eac-c41f-4dbd-8a18-0b7dc53bc602",
+      "Flags": 0,
+      "Name": "RootPanel",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "2060ff95-5986-4d9c-82cb-1ca2ac0083a5",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "Blastzone.RealityOn.UI.UIManager",
+          "__guid": "d75ec493-e888-4ede-82f0-f588ede9f436",
+          "Menu": true
+        }
+      ]
+    },
+    {
+      "__guid": "b9c10a5d-80ea-4183-aa00-046cb2721cc1",
+      "Flags": 0,
+      "Name": "Manager",
+      "Position": "-45.27531,-29.27528,42.46294",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Blastzone.RealityOn.Core.Manager",
+          "__guid": "63a1c1aa-2f49-4d4f-af0a-26d4d23838ed"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "minimal",
+  "Description": "",
+  "LastSaved": "2024-05-31T12:29:48.3028542\u002B02:00",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

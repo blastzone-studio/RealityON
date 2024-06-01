@@ -1,0 +1,27 @@
+@import "_colors.scss";
+
+header {
+    background-color: $primary;
+    color: $background;
+}
+
+button {
+    background-color: red;
+    border: 1px solid $border;
+    color: $background;
+
+    &:not(disabled)
+    {
+        //cursor:pointer;
+    }
+}
+
+.button-accent {
+    background-color: $accent;
+    color: $background;
+}
+
+.highlight {
+    background-color: $highlight;
+    color: $text;
+}

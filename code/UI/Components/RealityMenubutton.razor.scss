@@ -1,0 +1,24 @@
+RealityMenubutton, realitymenubutton {
+    width:25%;
+    background-color: #6c757d;
+    color: white;
+
+    &:not(.disabled) {
+        cursor: pointer;
+    }
+
+    .background-effect {
+        position: absolute;
+        z-index: 0;
+        height: 0%;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+        background-color: #00008f;
+
+        &:hover {
+            height: 100%;
+        }
+    }
+}

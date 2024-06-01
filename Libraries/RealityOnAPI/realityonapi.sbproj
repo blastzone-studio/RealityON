@@ -1,0 +1,14 @@
+{
+  "Title": "RealityOnAPI",
+  "Type": "library",
+  "Org": "mbk",
+  "Ident": "realityonapi",
+  "Tags": null,
+  "Schema": 1,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "Metadata": {
+    "CsProjName": ""
+  }
+}

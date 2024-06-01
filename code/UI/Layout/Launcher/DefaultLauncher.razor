@@ -1,0 +1,34 @@
+@using Blastzone.RealityOn.API.Interfaces
+@using Blastzone.RealityOn.UI
+@using Sandbox;
+@using Sandbox.UI;
+
+@inherits Panel
+@attribute [StyleSheet]
+@implements IRootView
+@namespace Mbk.RealityOn.UI.Layout.Launcher
+
+<root>
+    <text class="gamename">RealityOn</text>
+</root>
+
+@code
+{
+
+    [Property, TextArea] public float LoadingTime { get; set; } = 2f;
+    private TimeUntil CloseIn;
+
+    public DefaultLauncher()
+    {
+        CloseIn = LoadingTime;
+    }
+
+    public override void Tick()
+    {
+        if( CloseIn )
+        {
+            CloseIn = 999f;
+            UIManager.Instance.RootView = (IRootView)UIManager.CreatePanelFromRef(Consts.GameMenu);
+        }
+    }
+}

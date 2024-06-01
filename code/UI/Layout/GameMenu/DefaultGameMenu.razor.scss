@@ -1,0 +1,35 @@
+@import "../../Assets/Styles/Styles.scss";
+
+DefaultGameMenu {
+	height: 100%;
+	width: 100%;
+	background-color: $background;
+	color: white;
+	font-weight: bold;
+	transition: all 0.2s ease;
+	flex-direction:column;
+	font-size: 30px;
+	opacity: 1;
+	
+	//background-image: radial-gradient(white 25%, rgba(white, 0.25) 5%);
+	background-size: 25px 25px;
+	background-repeat: repeat;
+
+	pointer-events: all; /* Enabling mouse cursor */
+
+	&:intro {
+		opacity: 0;
+	}
+
+	&:outro {
+		opacity: 0;
+	}
+
+	.actions {
+		height:100%;
+		width:100%;
+		flex-direction:column;
+		border:2px solid red;
+		gap:5px;
+	}
+}

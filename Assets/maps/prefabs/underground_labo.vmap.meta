@@ -1,0 +1,24 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": null,
+      "Type": null,
+      "Org": null,
+      "Ident": null,
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "ResourcePaths": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.stone_cladding_hs_01#17357",
+        "baik.dark_wood_hs#8832"
+      ],
+      "Metadata": {}
+    }
+  }
+}

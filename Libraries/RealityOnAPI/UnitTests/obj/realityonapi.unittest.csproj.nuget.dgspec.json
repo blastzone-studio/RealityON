@@ -1,0 +1,392 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\UnitTests\\realityonapi.unittest.csproj": {}
+  },
+  "projects": {
+    "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\realityonapi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\realityonapi.csproj",
+        "projectName": "realityonapi",
+        "projectPath": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\realityonapi.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Steam\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj": {
+                "projectPath": "D:\\Steam\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj"
+              }
+            }
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\realityonapi.editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\realityonapi.editor.csproj",
+        "projectName": "realityonapi.editor",
+        "projectPath": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\realityonapi.editor.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "c:\\users\\administrator\\documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\realityonapi.csproj": {
+                "projectPath": "c:\\users\\administrator\\documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\realityonapi.csproj"
+              },
+              "D:\\Steam\\steamapps\\common\\sbox\\addons\\tools\\Code\\Base Editor Library.csproj": {
+                "projectPath": "D:\\Steam\\steamapps\\common\\sbox\\addons\\tools\\Code\\Base Editor Library.csproj"
+              }
+            }
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\UnitTests\\realityonapi.unittest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\UnitTests\\realityonapi.unittest.csproj",
+        "projectName": "realityonapi.unittest",
+        "projectPath": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\UnitTests\\realityonapi.unittest.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\UnitTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "c:\\users\\administrator\\documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\realityonapi.csproj": {
+                "projectPath": "c:\\users\\administrator\\documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\realityonapi.csproj"
+              },
+              "c:\\users\\administrator\\documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\realityonapi.editor.csproj": {
+                "projectPath": "c:\\users\\administrator\\documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\realityonapi.editor.csproj"
+              },
+              "D:\\Steam\\steamapps\\common\\sbox\\addons\\tools\\Code\\Base Editor Library.csproj": {
+                "projectPath": "D:\\Steam\\steamapps\\common\\sbox\\addons\\tools\\Code\\Base Editor Library.csproj"
+              }
+            }
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.7.2, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Steam\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Steam\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj",
+        "projectName": "Base Library",
+        "projectPath": "D:\\Steam\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\Steam\\steamapps\\common\\sbox\\addons\\base\\Code\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Steam\\steamapps\\common\\sbox\\addons\\tools\\Code\\Base Editor Library.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Steam\\steamapps\\common\\sbox\\addons\\tools\\Code\\Base Editor Library.csproj",
+        "projectName": "Base Editor Library",
+        "projectPath": "D:\\Steam\\steamapps\\common\\sbox\\addons\\tools\\Code\\Base Editor Library.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\Steam\\steamapps\\common\\sbox\\addons\\tools\\Code\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

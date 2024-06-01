@@ -1,0 +1,23 @@
+@using Blastzone.RealityOn.API.Interfaces
+@using Sandbox;
+@using Sandbox.UI;
+
+@inherits Panel
+@implements IRootView
+@attribute [StyleSheet]
+
+@namespace Mbk.RealityOn.UI.Layout.GameMenu
+
+<root>
+    <text>RealityOn</text>
+    <div class="actions">
+        <realitymenubutton>#play</realitymenubutton>
+        <realitymenubutton>#settings</realitymenubutton>
+        <realitymenubutton>#quit</realitymenubutton>
+    </div>
+</root>
+
+@code
+{
+
+}
