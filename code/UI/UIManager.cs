@@ -1,8 +1,10 @@
-﻿using Blastzone.RealityOn.API.Interfaces;
+﻿using Blastzone.RealityOn.API.Bases;
+using Blastzone.RealityOn.API.Interfaces;
+using Blastzone.RealityOn.UI.Layout.PlayerView;
 
 namespace Blastzone.RealityOn.UI;
 
-public class UIManager : Component, IRootView
+public class UIManager : RealityComponent, IRootView
 {
 	/// <summary>
 	/// Current instanciated class of UIManager.
@@ -58,7 +60,7 @@ public class UIManager : Component, IRootView
 		}
 		else
 		{
-
+			RootView = new PlayerHudContainer();
 		}
 	}
 

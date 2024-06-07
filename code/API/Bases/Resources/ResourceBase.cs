@@ -5,7 +5,7 @@ namespace Blastzone.RealityOn.API.Bases.Resources;
 /// <summary>
 /// This is the final resource game object status created by the game resources files 
 /// </summary>
-public abstract class ResourceBase : Component, IResource
+public abstract class ResourceBase : RealityComponent, IResource
 {
 	[Property]
 	[Category( "Definition" )]

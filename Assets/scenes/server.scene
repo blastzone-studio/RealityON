@@ -1,0 +1,186 @@
+{
+  "__guid": "efcc9ea3-852e-4c20-8a63-0d2cf595c788",
+  "GameObjects": [
+    {
+      "__guid": "eb142985-e520-4a28-b31e-6288e3aaa0a8",
+      "Flags": 0,
+      "Name": "RootPanel",
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "173bd7f6-2018-46dc-9b5b-7370620b39a7",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "Blastzone.RealityOn.UI.UIManager",
+          "__guid": "24fe38ad-3476-4b91-af0f-48b8414024f3",
+          "Menu": false
+        }
+      ]
+    },
+    {
+      "__guid": "df791367-5a6e-45e6-b30f-6ca49e234347",
+      "Flags": 0,
+      "Name": "Module Manager",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Blastzone.RealityOn.Core.Modules.ModuleManager",
+          "__guid": "9bb8725b-2557-411a-9222-b32ea2016a8f"
+        }
+      ]
+    },
+    {
+      "__guid": "d58baf0a-f864-4256-adcb-9ccdb78dd214",
+      "Flags": 0,
+      "Name": "Object",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "232d7dba-84c8-4405-858f-a861a7abdb01",
+          "MapName": "facepunch.flatgrass",
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "e80e0f19-a8da-4c7c-a8bf-d3aabc57530b",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "81.17725,690.3246,494.0695",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "51744528-aa17-486b-a606-972e23675b2e",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "__guid": "566c201d-0760-432e-8c82-6c183b729034",
+      "Flags": 0,
+      "Name": "LobbyManager",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Blastzone.RealityOn.LobbySystem.ServerLobby",
+          "__guid": "552e2686-e530-47cf-9bb1-9b46b18bb6b8",
+          "PlayerPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/player.prefab"
+          },
+          "Spawns": [
+            {
+              "_type": "gameobject",
+              "go": "a659b633-c238-45cc-b918-8d21e5d578e9"
+            },
+            {
+              "_type": "gameobject",
+              "go": "70e43061-f342-4c10-98e7-defb26ea0dfe"
+            },
+            {
+              "_type": "gameobject",
+              "go": "a3ff1d69-53a2-4da9-b688-6e348a1cc69e"
+            },
+            {
+              "_type": "gameobject",
+              "go": "2f26561c-689e-449c-9c39-25802140ee6f"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "a659b633-c238-45cc-b918-8d21e5d578e9",
+          "Flags": 0,
+          "Name": "spawnpoint",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true
+        },
+        {
+          "__guid": "70e43061-f342-4c10-98e7-defb26ea0dfe",
+          "Flags": 0,
+          "Name": "spawnpoint",
+          "Position": "-110.5357,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true
+        },
+        {
+          "__guid": "a3ff1d69-53a2-4da9-b688-6e348a1cc69e",
+          "Flags": 0,
+          "Name": "spawnpoint",
+          "Position": "-110.5357,-87.4626,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true
+        },
+        {
+          "__guid": "2f26561c-689e-449c-9c39-25802140ee6f",
+          "Flags": 0,
+          "Name": "spawnpoint",
+          "Position": "53.8241,-87.4626,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "server",
+  "Description": "",
+  "LastSaved": "2024-06-07T23:09:47.692537\u002B02:00",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

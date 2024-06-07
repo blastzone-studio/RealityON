@@ -1,0 +1,10 @@
+{
+  "ConstructType": "Wall",
+  "Model": null,
+  "ModelPath": null,
+  "Size": "0,0,0",
+  "Material": null,
+  "AdditionalProperties": {},
+  "__references": [],
+  "__version": 0
+}

@@ -2,8 +2,7 @@
 
 namespace Blastzone.RealityOn.API.Bases.Resources;
 
-[Category( "Frontier" )]
-[Title( "[Item] Medkit" )]
+[Title( "[Resource] Medkit" )]
 public sealed class Medkit : ResourceBase
 {
 	public Medkit()

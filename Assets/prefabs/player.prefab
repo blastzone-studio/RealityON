@@ -1,0 +1,40 @@
+{
+  "RootObject": {
+    "__guid": "f99fc0b7-a2e7-4fc6-9824-339adcbcf62b",
+    "Flags": 0,
+    "Name": "player",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "Children": [
+      {
+        "__guid": "9f5dc93e-c2c2-4400-b0e3-85d197815818",
+        "Flags": 0,
+        "Name": "GameObject",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "18ccca4c-af2b-4c61-aa20-7683f39de64b",
+            "BodyGroups": 1353,
+            "CreateBoneObjects": false,
+            "Model": "models/player/human/adam_mp.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [
+    "sboxmp.adam_mp"
+  ],
+  "__version": 1
+}

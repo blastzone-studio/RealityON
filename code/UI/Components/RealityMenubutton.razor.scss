@@ -1,24 +1,40 @@
+@import "../Assets/Styles/Styles.scss";
+
 RealityMenubutton, realitymenubutton {
-    width:25%;
-    background-color: #6c757d;
+    width: 25%;
+    background-color: rgba(20, 20, 20, 0.1);
     color: white;
+    text-transform: capitalize;
+    font-family: "Rubik";
+    transition: all 0.5s ease;
+    overflow: hidden;
+    gap: 25px;
+    align-items: center;
 
     &:not(.disabled) {
         cursor: pointer;
-    }
-
-    .background-effect {
-        position: absolute;
-        z-index: 0;
-        height: 0%;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-        background-color: #00008f;
 
         &:hover {
-            height: 100%;
+            color: $primary;
+
+            .bar {
+                background-color: rgba($primary, 1);
+            }
         }
+    }
+
+
+    .bar {
+        height: 100%;
+        width: 8px;
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: all 0.2s ease;
+    }
+
+    .background {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-image: linear-gradient( -90deg, rgba( black, 0.25 ), rgba( black, 0.0 ) );
     }
 }

@@ -2,8 +2,7 @@
 
 namespace Blastzone.RealityOn.API.Bases.Resources;
 
-[Category( "Frontier" )]
-public class ResourcePoint : Component, Component.ICollisionListener
+public class ResourcePoint : RealityComponent, Component.ICollisionListener
 {
 	[Property]
 	[Description( "Resource type that will be spawned at this point" )]

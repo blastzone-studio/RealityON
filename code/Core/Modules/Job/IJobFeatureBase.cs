@@ -1,4 +1,4 @@
-﻿namespace Blastzone.RealityOn.API.Bases.Job;
+﻿namespace Blastzone.RealityOn.Core.Modules.Job;
 
 /// <summary>
 /// Interface allowing implementation of a job feature

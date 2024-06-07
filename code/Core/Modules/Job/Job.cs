@@ -1,15 +1,23 @@
-﻿namespace Blastzone.RealityOn.API.Bases.Job;
+﻿namespace Blastzone.RealityOn.Core.Modules.Job;
 
 /// <summary>
-/// Definition of a job.
+/// Reprents the structure of a job.
 /// </summary>
 public class Job
 {
+	/// <summary>
+	/// Is this job part of the government (police, etc...)
+	/// </summary>
+	public bool PartOfGovernment { get; private set; } = false;
+
+	/// <summary>
+	/// Features that this job can do / having.
+	/// </summary>
 	public IList<IJobFeatureBase> Features { get; private set; }
 
-	public IJobFeatureBase GetFeature(string name)
+	public IJobFeatureBase GetFeature( string id )
 	{
-		return Features.SingleOrDefault(x=> x.Name == name) ?? null;
+		return Features.SingleOrDefault( x => x.Id == id ) ?? null;
 	}
 
 	public IJobFeatureBase GetFeature<T>() where T : IJobFeatureBase

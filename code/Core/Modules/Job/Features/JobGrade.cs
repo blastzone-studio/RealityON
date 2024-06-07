@@ -1,4 +1,6 @@
-﻿namespace Blastzone.RealityOn.API.Bases.Job.Features;
+﻿using Blastzone.RealityOn.Core.Modules.Job;
+
+namespace Blastzone.RealityOn.Core.Modules.Job.Features;
 
 /// <summary>
 /// Allowing hierarchy to being builded (grades).
@@ -8,7 +10,10 @@ public class JobHierarchy : IJobFeatureBase
 	public string Id => nameof( JobHierarchy );
 	public string Name => "#hierarchy";
 
-	public IList<JobGrade> Grades => new List<JobGrade>();
+	/// <summary>
+	/// The grades that the job will have.
+	/// </summary>
+	public IList<JobGrade> Grades { get; } = new List<JobGrade>();
 
 	public class JobGrade
 	{
@@ -49,5 +54,12 @@ public class JobHierarchy : IJobFeatureBase
 			MinSalary = minSalary;
 			MaxSalary = maxSalary;
 		}
+	}
+
+	public JobHierarchy() { }
+
+	public JobHierarchy( IList<JobGrade> grades ) : base()
+	{
+		Grades = grades;
 	}
 }

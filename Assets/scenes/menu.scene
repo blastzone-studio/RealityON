@@ -5,6 +5,7 @@
       "__guid": "89da5eac-c41f-4dbd-8a18-0b7dc53bc602",
       "Flags": 0,
       "Name": "RootPanel",
+      "Tags": "particles",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -19,7 +20,7 @@
         },
         {
           "__type": "Blastzone.RealityOn.UI.UIManager",
-          "__guid": "d75ec493-e888-4ede-82f0-f588ede9f436",
+          "__guid": "3353eeea-2c25-4e28-ba0d-faa1ea9e4b9e",
           "Menu": true
         }
       ]
@@ -63,7 +64,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-05-31T12:29:48.3028542\u002B02:00",
+  "LastSaved": "2024-06-01T20:52:40.00908\u002B02:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1

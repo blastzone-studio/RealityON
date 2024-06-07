@@ -4,7 +4,8 @@
 /// Abstract base class for a chat system in the game. 
 /// This class provides basic functionalities and can be extended for custom behaviors.
 /// </summary>
-public abstract class BaseChat : Panel
+[StyleSheet]
+public abstract class BaseChat : RealityPanel
 {
 	/// <summary>
 	/// Instance of BaseChat

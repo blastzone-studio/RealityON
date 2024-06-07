@@ -1,4 +1,6 @@
-﻿namespace Blastzone.RealityOn.API.Bases.Job.Features;
+﻿using Blastzone.RealityOn.Core.Modules.Job;
+
+namespace Blastzone.RealityOn.Core.Modules.Job.Features;
 
 /// <summary>
 /// Represents a salary feature for a job.

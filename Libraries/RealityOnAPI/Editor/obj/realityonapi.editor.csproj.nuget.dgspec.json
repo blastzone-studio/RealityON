@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\realityonapi.editor.csproj": {}
+    "C:\\Users\\Administrator\\documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\realityonapi.editor.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\realityonapi.csproj": {
+    "C:\\Users\\Administrator\\documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\realityonapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\realityonapi.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\realityonapi.csproj",
         "projectName": "realityonapi",
-        "projectPath": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\realityonapi.csproj",
+        "projectPath": "C:\\Users\\Administrator\\documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\realityonapi.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
         "outputPath": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Code\\obj\\",
         "projectStyle": "PackageReference",
@@ -77,12 +77,12 @@
         }
       }
     },
-    "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\realityonapi.editor.csproj": {
+    "C:\\Users\\Administrator\\documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\realityonapi.editor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\realityonapi.editor.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\realityonapi.editor.csproj",
         "projectName": "realityonapi.editor",
-        "projectPath": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\realityonapi.editor.csproj",
+        "projectPath": "C:\\Users\\Administrator\\documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\realityonapi.editor.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
         "outputPath": "c:\\Users\\Administrator\\Documents\\s&box projects\\realityon\\Libraries\\RealityOnAPI\\Editor\\obj\\",
         "projectStyle": "PackageReference",

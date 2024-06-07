@@ -3,18 +3,17 @@
 DefaultGameMenu {
 	height: 100%;
 	width: 100%;
-	background-color: $background;
 	color: white;
+	position: absolute;
 	font-weight: bold;
 	transition: all 0.2s ease;
-	flex-direction:column;
+	flex-direction: column;
 	font-size: 30px;
 	opacity: 1;
-	
-	//background-image: radial-gradient(white 25%, rgba(white, 0.25) 5%);
-	background-size: 25px 25px;
-	background-repeat: repeat;
-
+	font-family: Poppins;
+	padding: 50px;
+	background-image: url("https://cdnb.artstation.com/p/assets/images/images/047/343/237/large/vilhelm-faldbakken-20211122215108-1.jpg?1647365777");
+	background-size: cover;
 	pointer-events: all; /* Enabling mouse cursor */
 
 	&:intro {
@@ -25,11 +24,25 @@ DefaultGameMenu {
 		opacity: 0;
 	}
 
-	.actions {
+	.blur {
+		position:absolute;
 		height:100%;
 		width:100%;
-		flex-direction:column;
-		border:2px solid red;
-		gap:5px;
+		backdrop-filter: blur(10px);
+		background-color: rgba(blue, 0.1);
+	}
+
+	.actions {
+		height: 100%;
+		width: 25%;
+		flex-direction: column;
+		justify-content: center;
+		//border:2px solid red;
+		gap: 5px;
+
+		realitymenubutton {
+			height: 80px;
+			width: 100%;
+		}
 	}
 }
