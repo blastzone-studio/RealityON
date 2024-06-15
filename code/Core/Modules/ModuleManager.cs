@@ -1,5 +1,5 @@
 ﻿using Blastzone.RealityOn.API.Bases;
-using Blastzone.RealityOn.API.Interfaces;
+using Blastzone.RealityOn.API.Enums;
 using Blastzone.RealityOn.Core.Modules.Job;
 using Blastzone.RealityOn.Core.Systems;
 using System.Reflection;
@@ -13,7 +13,10 @@ namespace Blastzone.RealityOn.Core.Modules;
 public sealed class ModuleManager : RealityComponent
 {
 	public static ModuleManager Instance { get; private set; }
-	
+
+	/// <summary>
+	/// The loaded modules list.
+	/// </summary>
 	[Property] private IList<IModule> _modules;
 
 	/// <summary>
@@ -36,7 +39,10 @@ public sealed class ModuleManager : RealityComponent
 
 		var types = TypeLibrary.GetTypes().Where( x => x.IsClass && !x.IsAbstract && x.GetAttribute<ModuleAttribute>() != null );
 
-		// Discover and instantiate all job types in the TypeLibrary.
+		// Validate modules at application startup
+		//ModuleValidator.ValidateModules(types);
+
+		// Discover and instantiate all modules types in the TypeLibrary.
 		foreach ( var type in types )
 		{
 			Log.Info( type );
@@ -44,14 +50,17 @@ public sealed class ModuleManager : RealityComponent
 			var targetType = type.TargetType;
 
 			var module = TypeLibrary.Create<IModule>( targetType );
-			module.ModuleStatus = API.Enums.EModuleStatus.Loading;
-			module.Load();
-
 			_modules.Add( module );
 		}
-		
-		// Validate modules at application startup
-		ModuleValidator.ValidateModules();
+	}
+
+	protected override void OnEnabled()
+	{
+		foreach ( var module in _modules )
+		{
+			module.ModuleStatus = EModuleStatus.Loading;
+			module.Load();
+		}
 	}
 
 	/// <summary>
@@ -73,7 +82,8 @@ public sealed class ModuleManager : RealityComponent
 	{
 		foreach ( var module in _modules )
 		{
-			module.Stop();
+			if( module.ModuleStatus != EModuleStatus.Stopped )
+				module.Stop();
 		}
 	}
 
@@ -87,6 +97,22 @@ public sealed class ModuleManager : RealityComponent
 			module.Reload();
 		}
 	}
+
+	protected override void OnUpdate()
+	{
+		foreach ( var module in _modules )
+		{
+			if ( module.ModuleStatus != EModuleStatus.Running )
+				continue;
+
+			module.Update();
+		}
+	}
+
+	/// <summary>
+	/// Gets if a module runs.
+	/// </summary>
+	public static bool IsModuleRunning( IModule module ) => Instance._modules.SingleOrDefault(x=> x == module).ModuleStatus == EModuleStatus.Running;
 
 	/// <summary>
 	/// Gets the loaded modules.

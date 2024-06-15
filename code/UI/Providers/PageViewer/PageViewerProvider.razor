@@ -1,0 +1,43 @@
+﻿@inherits Panel
+@attribute [StyleSheet]
+
+@namespace Blastzone.RealityOn.UI.Providers
+
+<root>
+    @if (CloseButton)
+    {
+        <svg src="images/icons/close.svg" class="close" @onclick=@Close />
+    }
+</root>
+
+@code {
+    public static PageViewerProvider Instance { get; private set; }
+    public Panel DisplayedPanel { get; set; }
+    public bool CloseButton = true;
+
+    public PageViewerProvider()
+    {
+        Instance = this;
+    }
+
+    public static void Draw<T>(bool closebutton = true) where T : IPage, new ()
+    {
+        T dialog = new T();
+
+        Instance.CloseButton = closebutton;
+        Instance.DisplayedPanel = dialog as Panel;
+        Instance.AddChild(Instance.DisplayedPanel);
+        Instance.SetClass("draw", true);
+    }
+
+    public void Close()
+    {
+        DisplayedPanel.Delete();
+        DisplayedPanel = null;
+        SetClass("draw", false);
+
+        Log.Info("close dialog");
+    }
+
+    public static bool CanDraw => Instance.DisplayedPanel == null;
+}

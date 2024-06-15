@@ -1,6 +1,8 @@
 ﻿using Blastzone.RealityOn.API.Bases;
 using Blastzone.RealityOn.API.Interfaces;
 using Blastzone.RealityOn.UI.Layout.PlayerView;
+using Blastzone.RealityOn.UI.Providers;
+using Sandbox.UI;
 
 namespace Blastzone.RealityOn.UI;
 
@@ -35,6 +37,8 @@ public class UIManager : RealityComponent, IRootView
 				{
 					screenpanel.AddChild( panelref );
 					_rootView = value;
+
+					panelref.AddChild<PageViewerProvider>();
 				}
 				else
 				{

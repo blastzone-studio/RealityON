@@ -91,8 +91,8 @@
       "NetworkInterpolation": true,
       "Components": [
         {
-          "__type": "Blastzone.RealityOn.LobbySystem.ServerLobby",
-          "__guid": "552e2686-e530-47cf-9bb1-9b46b18bb6b8",
+          "__type": "Blastzone.RealityOn.Core.LobbySystem.ServerLobby",
+          "__guid": "6e08afc1-e686-4997-b890-e87d4157a7a9",
           "PlayerPrefab": {
             "_type": "gameobject",
             "prefab": "prefabs/player.prefab"
@@ -179,7 +179,7 @@
   },
   "Title": "server",
   "Description": "",
-  "LastSaved": "2024-06-07T23:09:47.692537\u002B02:00",
+  "LastSaved": "2024-06-11T19:27:23.2594027\u002B02:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1

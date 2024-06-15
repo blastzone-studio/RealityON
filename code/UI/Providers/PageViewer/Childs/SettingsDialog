@@ -1,0 +1,183 @@
+﻿@using Sandbox.Network
+@using Mbk.Frontier.Settings
+@using System.Text.Json
+@using Sandbox.Razor
+
+@inherits Panel
+@implements IDialog
+@attribute [StyleSheet]
+
+<root>
+    <text class="title">Settings</text>
+
+    <div class="tabs">
+
+        @foreach (var cat in list.GroupBy(g => g.Category).OrderBy(g => g.Key))
+        {
+            if (DisplayedCategory == null)
+                DisplayedCategory = cat;
+
+            <div class="tab @(DisplayedCategory.Key == cat.Key ? "active" : "")" onclick=@(()=> DisplayedCategory = cat)>
+                @cat.Key
+            </div>
+        }
+    </div>
+
+    <div class="container">
+        @foreach (var sub in DisplayedCategory.GroupBy(g => g.SubCategory).OrderBy(g => g.Key))
+        {
+            <span class="subtitle">@sub.Key</span>
+            @foreach (var setting in sub)
+            {
+                <div class="option">
+                    <text>@setting.Name</text>
+                    <span class="description">@setting.Description</span>
+                    <div class="value">
+                        @{
+                            // Get the value of the property
+                            var propertyValue = TypeLibrary.GetPropertyValue(setting, "Value");
+
+                            // Check if the property value is already a JsonElement
+                            if (setting.Value is JsonElement jsonElement)
+                            {
+                                // Process the JsonElement based on its value kind
+                                if (jsonElement.ValueKind == JsonValueKind.True || jsonElement.ValueKind == JsonValueKind.False)
+                                {
+                                    bool value = jsonElement.GetBoolean();
+                                    <FrontierSwitchControl Value:bind=@setting.Value OnValueChanged=@((bool newvalue)=> {setting.Value = newvalue;settingsNoSaved = true;})/>
+                                }
+                                else if (jsonElement.ValueKind == JsonValueKind.String)
+                                {
+                                    string value = jsonElement.GetString();
+
+                                    var options = setting.Options;
+
+                                    if (options.IsKeyInput)
+                                    {
+                                        if (SelectedSetting != setting)
+                                        {
+                                            <div class="keyinput" onclick=@(()=> {SelectedSetting = setting;})>@value</div>
+                                        }
+                                        else
+                                        {
+                                            <span class="awaitkey">#stg_await_for_keyentry</span>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <textentry type="text" value="@value" />
+                                    }
+                                }
+                                else if (jsonElement.ValueKind == JsonValueKind.Number)
+                                {
+                                    float value = float.Parse(jsonElement.GetRawText());
+
+                                    var options = setting.Options;
+
+                                    <FrontierSliderControl Max=@options.Max Value=@value Step=@(0.05f) ShowRange=@true OnValueChanged=@((float newvalue)=> {setting.Value = newvalue;settingsNoSaved = true;})/>
+                                }
+                            }
+                            else
+                            {
+                                // Handle cases where the property value is not a JsonElement
+                                if (propertyValue is bool boolValue)
+                                {
+                                    <FrontierSwitchControl Value:bind=@boolValue OnValueChanged=@((bool newvalue)=> {setting.Value = newvalue;settingsNoSaved = true;})/>
+                                }
+                                else if (propertyValue is string stringValue)
+                                {
+                                    var options = setting.Options;
+
+                                    if (options.IsKeyInput)
+                                    {
+                                        if (SelectedSetting != setting)
+                                        {
+                                            <div class="keyinput" style="text-transform:capitalize" onclick=@(()=> {SelectedSetting = setting;})>@stringValue</div>
+                                        }
+                                        else
+                                        {
+                                            <span class="awaitkey" style="text-transform:capitalize">#stg_await_for_keyentry</span>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <textentry type="text" value="@stringValue" />
+                                    }
+                                }
+                                else if (propertyValue is int intValue)
+                                {
+                                    <textentry type="number" value="@intValue" />
+                                }
+                                else if (propertyValue is float floatValue)
+                                {
+                                    @floatValue
+                                    var options = setting.Options;
+
+                                   <FrontierSliderControl Max=@options.Max Value=@floatValue Step=@(0.05f) ShowRange=@true OnValueChanged=@((float newvalue)=> {setting.Value = newvalue;settingsNoSaved = true;})/>
+                                }
+                                // Add more type checks as necessary
+                            }
+                        }
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+    <div class="actions">
+        @if (settingsNoSaved)
+        {
+            <text>#stg_notforget_tosave</text>
+        }
+        <div>
+            <button class="error" onclick=@SettingsManager.Reset>
+                <ButtonActiveFrame Size="16px"/>
+                <text>Reset to default</text>
+            </button>
+            <button class="success @(settingsNoSaved ? "notsaved" : "disabled")" onclick=@Save>
+                <ButtonActiveFrame Size="16px"/>
+                <text>Save</text>
+            </button>
+        </div>
+    </div>
+</root>
+
+@code {
+    IGrouping<string, SettingEntry> DisplayedCategory;
+    IList<SettingEntry> list = SettingsManager.Instance.Settings;
+    SettingEntry SelectedSetting = null;
+    bool settingsNoSaved = false;
+    //protected override int BuildHash() => System.HashCode.Combine(DateTime.Now);
+
+    public void OnAboutToExit()
+    {
+
+    }
+
+    void Save()
+    {
+        SettingsManager.Save();
+        settingsNoSaved = false;
+    }
+
+    public override void Tick()
+    {
+        if (SelectedSetting != null)
+        {
+            var pressed = Utility.GetPressedButton();
+            if(pressed != null)
+            {
+                Log.Info(pressed);
+
+                if (SelectedSetting.Value != pressed)
+                {
+                    SelectedSetting.Value = pressed;
+                    settingsNoSaved = true;
+                }
+
+                SelectedSetting = null;
+            }
+            //SelectedSetting = null;
+        }
+    }
+}

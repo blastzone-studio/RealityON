@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("realityonapi.unittest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a826ca2384c78253530537ee0899241d69ce05e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9748475cb92ba0dadf083b8e21ff01072c83b331")]
 [assembly: System.Reflection.AssemblyProductAttribute("realityonapi.unittest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("realityonapi.unittest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

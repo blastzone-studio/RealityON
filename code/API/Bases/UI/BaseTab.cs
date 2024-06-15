@@ -7,14 +7,14 @@
 public abstract class BaseTab : RealityPanel
 {
 	/// <summary>
-	/// Gets or sets the instance of the current <see cref="BaseTab"/>.
+	/// Gets the instance of the current <see cref="BaseTab"/>.
 	/// </summary>
 	public static BaseTab Instance { get; set; }
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="BaseTab"/> class.
 	/// </summary>
-	public BaseTab()
+	protected BaseTab()
 	{
 		Instance = this;
 		Log.Info( "new instance" );

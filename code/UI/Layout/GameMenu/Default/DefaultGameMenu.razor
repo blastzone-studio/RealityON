@@ -1,4 +1,5 @@
 @using Blastzone.RealityOn.API.Interfaces
+@using Blastzone.RealityOn.UI.Providers
 @using Sandbox;
 @using Sandbox.UI;
 
@@ -6,13 +7,13 @@
 @implements IRootView
 @attribute [StyleSheet]
 
-@namespace Mbk.RealityOn.UI.Layout.GameMenu
+@namespace Blastzone.RealityOn.UI.Layout.GameMenu.Default
 
 <root>
     <div class="blur"></div>
     <text>RealityOn</text>
     <div class="actions">
-        <realitymenubutton>#play</realitymenubutton>
+        <realitymenubutton onclick="@(()=> PageViewerProvider.Draw<DefaultServerList>())">#play</realitymenubutton>
         <realitymenubutton>#settings</realitymenubutton>
         <realitymenubutton>#quit</realitymenubutton>
     </div>

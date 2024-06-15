@@ -1,0 +1,58 @@
+﻿@import "../../Assets/Styles/Styles.scss";
+
+PageViewerProvider {
+    position: absolute;
+    z-index: 6;
+    height: 100%;
+    width: 100%;
+    display: none;
+    opacity: 0;
+    transition: all 0.2s ease;
+    align-items: center;
+    justify-content: center;
+    font-family: $font;
+
+    &.draw {
+        opacity: 1;
+        display: flex;
+        pointer-events: all;
+    }
+
+    .close {
+        z-index: 6;
+        position: absolute;
+        top: $padding;
+        right: $padding;
+        color: white;
+        font-size: 30px;
+        //background-color: rgba(50, 50, 50, 0.8);
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 100%;
+        transition: all 0.2s ease;
+
+        * {
+            position: absolute;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            sound-in: "sounds/ui.hover.sound";
+        }
+    }
+
+    * {
+        transition: all 0.2s ease;
+        opacity: 1;
+
+        &.intro {
+            opacity: 0;
+        }
+
+        &:outro {
+            opacity: 0;
+        }
+    }
+}

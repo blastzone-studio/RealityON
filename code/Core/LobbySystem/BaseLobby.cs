@@ -1,6 +1,6 @@
 ﻿using Sandbox.Network;
 
-namespace Mbk.Frontier.LobbySystem;
+namespace Blastzone.RealityOn.Core.LobbySystem;
 
 public abstract class BaseLobby : Component, Component.INetworkListener
 {
@@ -17,7 +17,7 @@ public abstract class BaseLobby : Component, Component.INetworkListener
 	/// <summary>
 	/// Return true if the lobby has reached max clients slots otherwise false.
 	/// </summary>
-	public bool IsFull => (Clients.Count == MaxClients);
+	public bool IsFull => Clients.Count == MaxClients;
 
 	/// <summary>
 	/// Return the lobby host client that own this lobby.
@@ -34,6 +34,7 @@ public abstract class BaseLobby : Component, Component.INetworkListener
 		if ( /*StartServer && */!GameNetworkSystem.IsActive )
 		{
 			GameNetworkSystem.CreateLobby();
+			//Networking.Connections
 
 			if ( Consts.Debug )
 				Log.Warning( $"[{Consts.GameName}] BaseLobby: New lobby has been created" );
@@ -85,7 +86,7 @@ public abstract class BaseLobby : Component, Component.INetworkListener
 	/// <summary>
 	/// A client has joined the lobby.
 	/// </summary>
-	protected virtual void OnClientJoined(Connection user)
+	protected virtual void OnClientJoined( Connection user )
 	{
 	}
 

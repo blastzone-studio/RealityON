@@ -1,5 +1,4 @@
 ﻿using Blastzone.RealityOn.API.Enums;
-using Blastzone.RealityOn.API.Interfaces;
 using Blastzone.RealityOn.API.Utility;
 
 namespace Blastzone.RealityOn.Core.Modules.Job;
@@ -8,27 +7,22 @@ namespace Blastzone.RealityOn.Core.Modules.Job;
 /// Manages the job system, including the list of available jobs and saving/loading job data.
 /// </summary>
 [Module]
-public sealed class JobModule : IModule
+public sealed class JobModule : ModuleBase
 {
 	/// <summary>
 	/// Gets the name of this module.
 	/// </summary>
-	public string ModuleName => "Job";
+	public override string ModuleName => "Job";
 
 	/// <summary>
 	/// Gets the version of this module.
 	/// </summary>
-	public float ModuleVersion => 0.1f;
+	public override float ModuleVersion => .1f;
 
 	/// <summary>
 	/// Gets the version of this module.
 	/// </summary>
-	public string ModulePath => "jobmodule";
-
-	/// <summary>
-	/// Gets the current status of this module.
-	/// </summary>
-	public EModuleStatus ModuleStatus { get; set; } = EModuleStatus.NotLoaded;
+	public override string ModulePath => "jobmodule";
 
 	/// <summary>
 	/// Gets the list of available jobs.
@@ -79,7 +73,7 @@ public sealed class JobModule : IModule
 	/// <summary>
 	/// Loads the module, initializing any necessary resources or dependencies.
 	/// </summary>
-	public async Task Load()
+	public override async Task Load()
 	{
 		if ( Consts.Debug )
 			Log.Info( $"[{ModuleName} - v{ModuleVersion}] loading.." );
@@ -88,12 +82,14 @@ public sealed class JobModule : IModule
 
 		if ( Consts.Debug )
 			Log.Info( $"[{ModuleName} - v{ModuleVersion}] loaded succesfully." );
+
+		await base.Load();
 	}
 
 	/// <summary>
 	/// Stops the module, releasing any resources or dependencies.
 	/// </summary>
-	public async Task Stop()
+	public override async Task Stop()
 	{
 		if ( Consts.Debug )
 			Log.Info( $"[{ModuleName} - v{ModuleVersion}] stopping.." );
@@ -102,12 +98,14 @@ public sealed class JobModule : IModule
 
 		if ( Consts.Debug )
 			Log.Info( $"[{ModuleName} - v{ModuleVersion}] stopped succesfully." );
+
+		await base.Stop();
 	}
 
 	/// <summary>
 	/// Reloads the module, typically by calling <see cref="Stop"/> followed by <see cref="Load"/>.
 	/// </summary>
-	public async Task Reload()
+	public override async Task Reload()
 	{
 		if( Consts.Debug)
 			Log.Info( $"[{ModuleName} - v{ModuleVersion}] reloading.." );
@@ -117,5 +115,12 @@ public sealed class JobModule : IModule
 
 		if ( Consts.Debug )
 			Log.Info( $"[{ModuleName} - v{ModuleVersion}] reloaded succesfully." );
+
+		await base.Reload();
+	}
+
+	public override void Update()
+	{
+		Log.Info( $"[{ModuleName} - v{ModuleVersion}] Update() call" );
 	}
 }

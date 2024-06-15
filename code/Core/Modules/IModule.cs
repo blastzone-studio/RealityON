@@ -1,6 +1,8 @@
 ﻿using Blastzone.RealityOn.API.Enums;
 
-namespace Blastzone.RealityOn.API.Interfaces;
+namespace Blastzone.RealityOn.Core.Modules;
+
+public delegate void UpdateEvent();
 
 /// <summary>
 /// Represents a module.
@@ -44,4 +46,6 @@ public interface IModule
 	/// Reloads the module, typically by calling <see cref="Stop"/> followed by <see cref="Load"/>.
 	/// </summary>
 	Task Reload();
+
+	void Update();
 }

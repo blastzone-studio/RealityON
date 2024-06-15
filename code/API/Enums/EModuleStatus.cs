@@ -29,5 +29,10 @@ public enum EModuleStatus
 	/// <summary>
 	/// The module has been stopped.
 	/// </summary>
-	Stopped
+	Stopped,
+
+	/// <summary>
+	/// The module can't be loaded, an error is occuring.
+	/// </summary>
+	Error
 }

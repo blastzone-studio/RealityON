@@ -32,13 +32,7 @@
       "Position": "-45.27531,-29.27528,42.46294",
       "Enabled": true,
       "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Blastzone.RealityOn.Core.Manager",
-          "__guid": "63a1c1aa-2f49-4d4f-af0a-26d4d23838ed"
-        }
-      ]
+      "NetworkInterpolation": true
     }
   ],
   "SceneProperties": {
@@ -64,7 +58,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-01T20:52:40.00908\u002B02:00",
+  "LastSaved": "2024-06-12T21:27:54.9561749\u002B02:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1

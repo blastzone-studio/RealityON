@@ -1,5 +1,5 @@
-﻿using Mbk.RealityOn.UI.Layout.GameMenu;
-using Mbk.RealityOn.UI.Layout.Launcher;
+﻿using Blastzone.RealityOn.UI.Layout.GameMenu.Default;
+using Blastzone.RealityOn.UI.Layout.Launcher;
 
 namespace Blastzone.RealityOn.Core;
 
