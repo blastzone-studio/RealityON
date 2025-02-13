@@ -1,0 +1,79 @@
+LoadingMenu {
+	pointer-events: all;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #070707;
+	/*background-image: linear-gradient(90deg, rgb(0, 38, 255) 0%, rgb(0, 0, 0) 50%, rgb(0, 38, 255) 100%);*/
+	justify-content: center;
+	align-items: center;
+	font-family: Lexend;
+	flex-direction: column;
+	gap: 50px;
+
+	.shadow {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		background-size: cover;
+		background-image: url("images/BackgroundShadow.png");
+	}
+
+	.branding {
+		gap: 20px;
+		flex-direction: column;
+
+		.name {
+			gap: 20px;
+
+			span {
+				font-size: 128px;
+
+				&:first-child {
+					color: blue;
+					text-align: center;
+				}
+
+				&:nth-child(2) {
+					color: white;
+					text-align: center;
+				}
+			}
+		}
+
+		.version {
+			font-size: 30px;
+			color: white;
+			align-self: flex-end;
+		}
+	}
+
+
+
+	.loading {
+		background-color: #0048FF;
+		border-radius: 23px;
+		width: 600px;
+		height: 90px;
+		justify-content: center;
+		box-shadow: 0px 4px 4px 0px rgba( #0048FF, 0.10);
+		align-items: center;
+		font-size: 40px;
+		color: white;
+	}
+
+	.info {
+		position: absolute;
+		top: 40px;
+		right: 40px;
+		gap: 15px;
+
+		svg {
+			height: 34px;
+			width: 34px;
+		}
+	}
+}

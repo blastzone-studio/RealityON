@@ -1,60 +1,20 @@
-RealityOnMenu {
-	pointer-events: all;
+RealityOnMenu
+{
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: linear-gradient(90deg, rgb(0, 38, 255) 0%, rgb(0, 0, 0) 50%, rgb(0, 38, 255) 100%);
+	background-color: #444;
 	justify-content: center;
 	align-items: center;
-	font-family: Lexend;
+	font-weight: bold;
+	border-radius: 20px;
 
-
-
-	.container {
-		position: absolute;
-		top: 250px;
-		flex-direction: column;
-
-
-		div {
-			gap: 20px;
-
-			span {
-				font-size: 128px;
-
-				&:first-child {
-					color: blue;
-					text-align: center;
-				}
-
-				&:nth-child(2) {
-					color: white;
-					text-align: center;
-				}
-			}
-		}
-
-		p {
-			font-size: 30px;
-			color: white;
-		}
-	}
-
-	.loading {
-		position: absolute;
-		top: 350px;
-		background-color: #242424;
-		border-radius: 23px;
-		width: 800px;
-		height: 100px;
-		justify-content: center;
-		box-shadow: 0px 11px 4px 0px rgba(0, 0, 0, 0.25);
-
-		p {
-			align-self: center;
-			font-size: 40px;
-		}
+	.title
+	{
+		font-size: 25px;
+		font-family: Poppins;
+		color: #fff;
 	}
 }

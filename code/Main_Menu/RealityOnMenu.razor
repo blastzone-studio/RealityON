@@ -4,32 +4,16 @@
 @namespace Sandbox
 
 <root>
-	<div class="container">
-		<div>
-			<span>REALITY</span>
-			<span>ON</span>
-		</div>
-		<div>
-			<p>V 0.0.1</p>
-		</div>
-
-		<div class="loading">
-			<p>LOADING...</p>
-		</div>
-
-		<div class="info">
-			<img src="images/github.svg" />
-			<img src="images/discord.svg" />
-		</div>
-	</div>
+	<div class="title">@MyStringValue</div>
 </root>
 
 @code
 {
+
+	[Property, TextArea] public string MyStringValue { get; set; } = "Hello World!";
+
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
 	/// </summary>
-	protected override int BuildHash(){
-		return System.HashCode.Combine("");
-	}
+	protected override int BuildHash() => System.HashCode.Combine( MyStringValue );
 }

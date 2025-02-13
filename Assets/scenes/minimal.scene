@@ -528,8 +528,8 @@
           "ZIndex": 100
         },
         {
-          "__type": "Sandbox.RealityOnMenu",
-          "__guid": "3047d4d5-f3f3-445e-8bad-fbb688e35ae6",
+          "__type": "Sandbox.LoadingMenu",
+          "__guid": "51db92a0-25cb-4cb7-8d16-556a80b84271",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,

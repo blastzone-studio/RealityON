@@ -1,0 +1,33 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	<div class="shadow"></div>
+	<div class="branding">
+		<div class="name">
+			<span>REALITY</span>
+			<span>ON</span>
+		</div>
+		<span class="version">V 0.0.1</span>
+	</div>
+
+	<div class="loading">
+		LOADING...
+	</div>
+	<div class="info">
+		<svg src="images/github.svg"  color="white" />
+		<svg src="images/discord.svg" color="white" />
+	</div>
+</root>
+
+@code
+{
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash(){
+		return System.HashCode.Combine("");
+	}
+}
