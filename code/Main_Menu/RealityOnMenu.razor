@@ -4,16 +4,67 @@
 @namespace Sandbox
 
 <root>
-	<div class="title">@MyStringValue</div>
+	<div class="top-bar">
+		<div class="branding">
+			<span>REALITY</span>
+			<span>ON</span>
+		</div>
+		<div class="discord-git">
+			<svg src="images/github.svg" color="white" />
+			<svg src="images/discord.svg" color="white" />
+		</div>
+		<div class="players-counters">
+			<svg src="images/arrow.svg" color="blue" />
+			<span>2,500</span>
+			<span>Players Current Onlines</span>
+		</div>
+
+		<div class="end">
+			<div class="blastweb">
+				<span>BLASTWEB</span>
+			</div>
+			<div class="profil">
+				<svg src="images/profil.svg" />
+				<div>
+					<span>WELCOME</span>
+					<span>USER</span>
+				</div>
+			</div>
+			<div class="settings">
+				<div class="icon">
+
+					<svg src="images/setting.svg" />
+				</div>
+				<span>SETTINGS</span>
+			</div>
+			<div class="exit">
+				<div class="icon">
+
+					<svg src="images/exit.svg" />
+				</div>
+				<span>EXIT</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="contain">
+		<h1>CONTENU</h1>
+	</div>
+
+	<div class="version">
+		<h1>V 0.0.1</h1>
+	</div>
 </root>
 
 @code
 {
 
-	[Property, TextArea] public string MyStringValue { get; set; } = "Hello World!";
+	
 
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
 	/// </summary>
-	protected override int BuildHash() => System.HashCode.Combine( MyStringValue );
+	protected override int BuildHash() {
+		return System.HashCode.Combine("");
+	}
 }

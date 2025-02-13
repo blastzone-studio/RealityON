@@ -530,6 +530,17 @@
         {
           "__type": "Sandbox.LoadingMenu",
           "__guid": "51db92a0-25cb-4cb7-8d16-556a80b84271",
+          "__enabled": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "Sandbox.RealityOnMenu",
+          "__guid": "2c7b7b79-f8a2-4c2f-a8b7-8d07f7d1640c",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,

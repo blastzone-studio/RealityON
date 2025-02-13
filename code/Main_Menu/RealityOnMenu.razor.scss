@@ -1,20 +1,196 @@
-RealityOnMenu
-{
+RealityOnMenu {
+	pointer-events: all;
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #444;
+	background-color: #070707;
 	justify-content: center;
 	align-items: center;
-	font-weight: bold;
-	border-radius: 20px;
+	font-family: Arial;
 
-	.title
-	{
-		font-size: 25px;
-		font-family: Poppins;
-		color: #fff;
+	.top-bar {
+		position: absolute;
+		top: 5px;
+		left: 0px;
+		width: 100%;
+		height: 150px;
+		//background-color: rgba(blue,0.10);
+		align-items: center;
+		flex-direction: row;
+		padding: 15px;
+		gap: 20px;
+
+		.branding {
+			gap: 20px;
+
+			span {
+				font-size: 48px;
+
+				&:first-child {
+					color: blue;
+					text-align: center;
+				}
+
+				&:nth-child(2) {
+					color: white;
+					text-align: center;
+				}
+			}
+		}
+
+		.discord-git {
+			gap: 8px;
+
+			svg {
+				height: 34px;
+				width: 34px;
+			}
+		}
+
+
+		.players-counters {
+			gap: 8px;
+			align-items: center;
+
+			svg {
+				height: 24px;
+				width: 24px;
+			}
+
+			span {
+				font-size: 24px;
+
+				&:nth-child(2) {
+					color: white;
+					text-align: center;
+				}
+
+				&:nth-child(3) {
+					color: white;
+					text-align: center;
+				}
+			}
+		}
+
+		.end {
+			margin-left: auto;
+			gap: 20px;
+			align-items: center;
+
+			.blastweb {
+				width: 110px;
+				height: 50px;
+				background-color: blue;
+
+				span {
+					&:first-child {
+						align-self: center;
+						margin-left: 5px;
+						font-size: 18px;
+						align-self: center;
+						color: white;
+						text-align: center;
+					}
+				}
+			}
+
+			.profil {
+				gap: 10px;
+				align-items: center;
+
+				svg {
+					height: 58px;
+					width: 58px;
+				}
+
+				div {
+					flex-direction: column;
+
+					span {
+						&:nth-child(1) {
+							font-size: 24px;
+							color: rgba(white,0.75);
+						}
+
+						&:nth-child(2) {
+							font-size: 30px;
+							color: white;
+						}
+					}
+				}
+			}
+
+			.settings {
+				flex-direction: column;
+				align-items: center;
+				gap: 8px;
+
+				.icon {
+					align-items: center;
+					justify-content: center;
+					border-radius: 5px;
+					background-color: blue;
+					width: 60px;
+					height: 60px;
+
+					svg {
+						height: 40px;
+						width: 40px;
+					}
+				}
+
+				span {
+					font-size: 13px;
+					color: rgba(white,0.85);
+				}
+			}
+
+			.exit {
+				flex-direction: column;
+				align-items: center;
+				gap: 8px;
+
+				.icon {
+					align-items: center;
+					justify-content: center;
+					border-radius: 5px;
+					background-color: blue;
+					width: 60px;
+					height: 60px;
+
+					svg {
+						height: 40px;
+						width: 40px;
+					}
+				}
+
+				span {
+					font-size: 13px;
+					color: rgba(white,0.85);
+				}
+			}
+		}
+	}
+
+
+
+	.contain {
+		position: absolute;
+		top: 210px;
+		left: 0px;
+		width: 100%;
+		height: 750px;
+		background-color: green;
+	}
+
+	.version {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		height: 75px;
+		background-color: purple;
 	}
 }
